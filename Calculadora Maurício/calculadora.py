@@ -43,7 +43,10 @@ def main():
 
         operacao = OPCOES[escolha](a,b)
 
-        print(f"\nResultado: {operacao}")
+        try:
+            print(f"Resultado:{operacao}")
+        except ValueError as erro:
+            print(f"Erro:{erro}")
 
 if __name__ == "__main__":
     main()
